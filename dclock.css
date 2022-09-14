@@ -1,0 +1,167 @@
+:root {
+  --vline: 4rem;
+  --hline: 3.4rem;
+  --thickness: 0.5rem;
+}
+.on-view {
+  background-color: aqua !important;
+}
+.on-view-circle {
+  background-color: aqua !important;
+}
+.no-view-circle {
+  background-color: rgb(33, 38, 38) !important;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 12rem;
+  margin-top: 3rem;
+  gap: 0.1rem;
+}
+.hour-display {
+  flex-basis: 15rem;
+  display: flex;
+  height: 10rem;
+  gap: 0.1rem;
+}
+.colon {
+  flex-basis: 4rem;
+  height: 10rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+#status {
+  box-sizing: border-box;
+  margin-bottom: -0.2rem;
+  font-size: 1.5rem;
+}
+.colon > div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+.min-display {
+  flex-basis: 15rem;
+  display: flex;
+  height: 10rem;
+  gap: 0.1rem;
+}
+.seconds-display {
+  flex-basis: 15rem;
+  display: flex;
+  height: 10rem;
+  gap: 0.1rem;
+}
+.first-digit {
+  width: 50%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.second-digit {
+  width: 50%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.vertical > div {
+  width: var(--thickness);
+  height: var(--vline);
+  background-color: rgb(33, 38, 38);
+  gap: 1rem;
+  margin-top: 0.1rem;
+  border-radius: 10px;
+}
+.horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.horizontal > div {
+  width: var(--hline);
+  height: var(--thickness);
+  background-color: rgb(33, 38, 38);
+  border-radius: 10px;
+  gap: 1rem;
+  margin-top: 0.1rem;
+}
+
+.colon > div:nth-child(1) {
+  color: aqua;
+  text-align: end;
+  font-size: 18px;
+  letter-spacing: 5px;
+  padding-left: 15px;
+}
+@media screen and (max-width: 50rem) {
+  :root {
+    --vline: 2rem;
+    --hline: 1.7rem;
+    --thickness: 0.25rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 8rem;
+    margin-top: 3rem;
+    gap: 0.05rem;
+  }
+  .colon {
+    flex-basis: 2rem;
+    height: 5rem;
+    gap: 0.2rem;
+  }
+  .hour-display {
+    flex-basis: 7.5rem;
+    display: flex;
+    height: 5rem;
+    gap: 0.1rem;
+  }
+  .min-display {
+    flex-basis: 7.5rem;
+    height: 5rem;
+    gap: 0.1rem;
+  }
+  .seconds-display {
+    flex-basis: 7.5rem;
+    height: 5rem;
+    gap: 0.1rem;
+  }
+  .circle {
+    width: 7px;
+    height: 7px;
+  }
+  .colon > div {
+    gap: 0.5rem;
+  }
+  #status {
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+}
